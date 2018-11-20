@@ -26,4 +26,20 @@ public class Listagem extends Cartao{
     public void setRelacaoCartao(ArrayList relacaoCartao) {
         this.relacaoCartao = relacaoCartao;
     }
+
+    public void adicionarCartao(String nomeCartao){
+        Cartao novaCartao = new Cartao(nomeCartao);
+        relacaoCartao.add(novaCartao);
+    }
+
+    public void removerCartao(String removerCartao){
+        relacaoCartao.remove(removerCartao);
+    }
+
+    public void mostraLista(){
+        System.out.println("Relação da Listagem :" + getNomeLista());
+        for(Cartao lista: relacaoCartao ){
+            System.out.println(lista.toString());
+        }
+    }
 }
