@@ -41,7 +41,7 @@ public class Cartao {
     }
 
     public String toString(){
-        return "Lembrete Cartão:"+ this.cartao + "\nEtiqueta:" + this.corEtiqueta + "\nComentario"+ this.comentario;
+        return "Lembrete de Cartão:"+ this.cartao + "\nEtiqueta:" + this.corEtiqueta + "\nComentario"+ this.comentario;
     }
 
 }
