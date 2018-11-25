@@ -9,9 +9,8 @@ public class Listagem extends Cartao{
 
     public Listagem(){}
 
-    public Listagem(String nomeLista, ArrayList relacaoCartao) {
+    public Listagem(String nomeLista) {
         this.nomeLista = nomeLista;
-        this.relacaoCartao = relacaoCartao;
     }
 
     public String getNomeLista() {
@@ -23,10 +22,6 @@ public class Listagem extends Cartao{
     }
 
 
-    public void setRelacaoCartao(ArrayList relacaoCartao) {
-        this.relacaoCartao = relacaoCartao;
-    }
-
     public void adicionarCartao(String nomeCartao){
         Cartao novaCartao = new Cartao(nomeCartao);
         relacaoCartao.add(novaCartao);
@@ -36,10 +31,12 @@ public class Listagem extends Cartao{
         relacaoCartao.remove(removerCartao);
     }
 
-    public void mostraLista(){
-        System.out.println("Relação da Listagem :" + getNomeLista());
-        for(Cartao lista: relacaoCartao ){
-            System.out.println(lista.toString());
-        }
+
+    @Override
+    public String toString() {
+        return "Listagem{" +
+                "nomeLista='" + nomeLista + '\'' +
+                ", relacaoCartao=" + relacaoCartao +
+                '}';
     }
 }

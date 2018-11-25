@@ -24,7 +24,7 @@ public class Cartao {
         this.cartao = cartao;
     }
 
-    public void getCorEtiqueta(String  corEtiqueta){
+    public void setCorEtiqueta(String  corEtiqueta){
         this.corEtiqueta = corEtiqueta;
     }
 
